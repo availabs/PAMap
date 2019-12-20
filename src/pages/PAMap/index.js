@@ -9,7 +9,13 @@ class Home extends Component {
      <div style={{width: '100vw', height: '100vh'}}>
 
        <AvlMap
-       layers={[eventsLayer]}
+        layers={[eventsLayer]}
+        sidebar={false}
+        zoom={7}
+        center={ [
+          -75.60791015625,
+          42.76314586689492
+        ]}
        /> 
 
      </div>
