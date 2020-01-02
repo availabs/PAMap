@@ -11,7 +11,13 @@ import styled from "styled-components";
 // import './menu.css'
 
 class Menu extends Component {
-    fetchFalcorDeps() {
+    constructor(props) {
+        super(props);
+        this.state = {
+            menuDisplay: 'none'
+        }
+    }
+/*    fetchFalcorDeps() {
         if (!this.props.activeGeoid) return Promise.resolve();
         return this.props.falcor.get(
             ['geo', this.props.activeGeoid, 'cousubs']
@@ -21,7 +27,7 @@ class Menu extends Component {
                     ['geo', [this.props.activeGeoid, ...falcorGraph.getCache().geo[this.props.activeGeoid].cousubs.value], ['name']],
                 )
             })
-    }
+    }*/
     render() {
         if (this.props.menuSettings.hide) return null;
         let geoInfo = get(falcorGraph.getCache(), `geo`, null)
@@ -31,7 +37,7 @@ class Menu extends Component {
 
         // let title = currentPath[0] ? currentPath[0].name : ''
         let defaultOptions = {
-            'location': 'menu-w',
+            'location': 'menu-mobile',
             'color': 'selected-menu-color-light',
             'click': 'menu-activated-on-click',
             'selected': 'menu-has-selected-link',
@@ -44,6 +50,8 @@ class Menu extends Component {
             'subemenustyle': 'sub-menu-style-inside'
         };
         /*
+        menu-mobile menu-activated-on-click color-scheme-dark
+
          menu-activated-on-click sub-menu-style-inside
          menu-activated-on-hover sub-menu-style-flyout
         * */
@@ -56,7 +64,8 @@ class Menu extends Component {
         let dynamicStyle = {
             marginBottom: currentPath.subMenus ? 50 : 0,
             position: 'fixed',
-            zIndex: 100
+            zIndex: 100,
+            width: '100%'
         };
 
         defaultOptions.position === 'menu-position-top' ?
@@ -94,11 +103,53 @@ class Menu extends Component {
         return (
 
             <div className={displayOptions} style={dynamicStyle}>
-                <Logo/>
-				{userMenu}
-				<h1 className="menu-page-header">{this.props.title}</h1>
-                <MainMenu {...this.props} />
-                
+                <div className="mm-logo-buttons-w">
+                    <a className="mm-logo" href="index.html">
+                        <Logo/>
+                    </a>
+                    <div className="mm-buttons">
+                        <div className="content-panel-open">
+                            <div className="os-icon os-icon-grid-circles"></div>
+                        </div>
+                        <div className="mobile-menu-trigger" onClick={() => {
+                            this.state.menuDisplay === 'none' ?
+                                this.setState({menuDisplay: 'block'}) :
+                                this.setState({menuDisplay: 'none'})
+                        }}>
+                            <div className="os-icon os-icon-hamburger-menu-1">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div className="menu-and-user" style={{display: this.state.menuDisplay}}>
+                    <div className="logged-user-w">
+                        <div className="avatar-w"><i className='os-icon os-icon-user' /></div>
+                        <div className="logged-user-info-w">
+                            <div className="logged-user-name">Maria Gomez</div>
+                            <div className="logged-user-role">Administrator</div>
+                        </div>
+                    </div>
+                    <ul className="main-menu">
+                        {/*<li className="has-sub-menu">
+                            <a href="index.html">
+                            <div className="icon-w">
+                                <div className="os-icon os-icon-layout"></div>
+                            </div>
+                            <span>Dashboard</span></a>
+                            <ul className="sub-menu">
+                                <li><a href="index.html">Dashboard 1</a></li>
+                                <li><a href="apps_crypto.html">Crypto Dashboard <strong
+                                    className="badge badge-danger">Hot</strong></a></li>
+                            </ul>
+                        </li>*/}
+                        <li><MainMenu {...this.props} />
+                        </li>
+                       {/* <li>{userMenu}</li>*/}
+                    </ul>
+                </div>
+
+
             </div>
 
         )
