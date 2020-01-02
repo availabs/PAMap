@@ -25,7 +25,7 @@ class Home extends Component {
 }
 
 export default {
-	path: '/',
+	path: '/pamap',
 	exact: true,
 	mainNav: true,
   menuSettings: {
@@ -36,7 +36,7 @@ export default {
     layout: 'menu-layout-mini',
     style: 'color-style-default'  
   },
-  name: 'Home',
+  name: 'PA Map',
 	auth: false,
 	component: Home
 }
