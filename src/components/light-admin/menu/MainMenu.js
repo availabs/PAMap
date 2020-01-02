@@ -13,7 +13,7 @@ class MainMenu extends Component {
       .filter(menu => menu.mainNav)
       .filter(menu => !menu.auth || this.props.authed)
       .map((menu, index) => {
-        // console.log(menu.path.split('/'), this.props.path.split('/'))
+        console.log('mainmenu',menu.path.split('/'), this.props.path.split('/'), menus)
         let topMenu = menu.path ? menu.path.split('/')[1] : ''
         let currentTop = this.props.path ? this.props.path.split('/')[1] : ' ' 
         let isActive = topMenu === currentTop
@@ -25,7 +25,7 @@ class MainMenu extends Component {
           <li
             key={'menuItem_' + index}
             id={'menuItem_' + index}
-            className={`top-menu-tab ${isActive}`}
+            //className={`top-menu-tab ${isActive}`}
             name={menu.path} 
             onMouseOver={this.menuMouseOver}
             onMouseOut={this.menuMouseOut}
@@ -46,8 +46,8 @@ class MainMenu extends Component {
       return (
         <li
           key={'menuItem_' + index}
-          className={`top-menu-tab has-sub-menu ${isActive}`} 
-          id={'menuItem_' + index}
+          //className={`top-menu-tab has-sub-menu ${isActive}`}
+          //id={'menuItem_' + index}
           onClick={this.menuClick}
           //onMouseOut={this.menuMouseOut}
         >
@@ -112,11 +112,15 @@ class MainMenu extends Component {
   }
 
   menuMouseOver (event) {
-    event.target.closest('.top-menu-tab').classList.add('active');
+      if (event.target.closest('.top-menu-tab') &&
+          event.target.closest('.top-menu-tab').classList.value.indexOf('active') === -1) {
+          event.target.closest('.top-menu-tab').classList.add('active');
+      }
   }
 
   menuMouseOut (event) {
     if (
+        event && event.target.closest('.top-menu-tab') &&
       (!event.relatedTarget 
       || !event.relatedTarget.closest('ul')
       || event.relatedTarget.closest('ul').id.indexOf('subMenu') === -1)
@@ -128,9 +132,7 @@ class MainMenu extends Component {
 
   render () {
     return (
-      <ul className="main-menu">
-        {this.renderMenus(this.props.menus)}      
-      </ul>
+        this.renderMenus(this.props.menus)
     )
   }
 }

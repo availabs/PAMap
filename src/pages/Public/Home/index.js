@@ -38,14 +38,14 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = {};
 export default [{
     icon: 'os-icon-home',
-    path: '/',
+    path: '/public',
     exact: true,
     name: 'Public',
     auth: false,
     mainNav: false,
     breadcrumbs: [
-        {name: 'Home', path: '/'},
-        {param: 'geoid', path: '/'}
+        {name: 'Home', path: '/public'},
+        {param: 'geoid', path: '/public/'}
     ],
     menuSettings: {
         image: 'none',

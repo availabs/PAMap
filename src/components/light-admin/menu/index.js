@@ -8,6 +8,7 @@ import { reduxFalcor } from 'utils/redux-falcor'
 import {setActiveCousubid} from 'store/modules/user'
 import get from 'lodash.get'
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 // import './menu.css'
 
 class Menu extends Component {
@@ -65,7 +66,8 @@ class Menu extends Component {
             marginBottom: currentPath.subMenus ? 50 : 0,
             position: 'fixed',
             zIndex: 100,
-            width: '100%'
+            width: '100%',
+            display: 'block'
         };
 
         defaultOptions.position === 'menu-position-top' ?
@@ -96,15 +98,12 @@ class Menu extends Component {
                     }
                     `;
             // console.log('menuProps', currentPath, dynamicStyle)
-        let userMenu = this.props.user && !!this.props.user.authed
-            ? <AvatarUser user={this.props.user}/>
-            : <LoginMenu/>;
-
+        console.log('user', this.props)
         return (
 
             <div className={displayOptions} style={dynamicStyle}>
                 <div className="mm-logo-buttons-w">
-                    <a className="mm-logo" href="index.html">
+                    <a className="mm-logo" href="/">
                         <Logo/>
                     </a>
                     <div className="mm-buttons">
@@ -123,29 +122,30 @@ class Menu extends Component {
                     </div>
                 </div>
                 <div className="menu-and-user" style={{display: this.state.menuDisplay}}>
-                    <div className="logged-user-w">
-                        <div className="avatar-w"><i className='os-icon os-icon-user' /></div>
-                        <div className="logged-user-info-w">
-                            <div className="logged-user-name">Maria Gomez</div>
-                            <div className="logged-user-role">Administrator</div>
-                        </div>
-                    </div>
-                    <ul className="main-menu">
-                        {/*<li className="has-sub-menu">
-                            <a href="index.html">
-                            <div className="icon-w">
-                                <div className="os-icon os-icon-layout"></div>
+                    {
+                        this.props.user && !!this.props.user.authed
+                    ?
+                            <div className="logged-user-w">
+                                <AvatarUser user={this.props.user}/>
                             </div>
-                            <span>Dashboard</span></a>
-                            <ul className="sub-menu">
-                                <li><a href="index.html">Dashboard 1</a></li>
-                                <li><a href="apps_crypto.html">Crypto Dashboard <strong
-                                    className="badge badge-danger">Hot</strong></a></li>
-                            </ul>
-                        </li>*/}
-                        <li><MainMenu {...this.props} />
-                        </li>
-                       {/* <li>{userMenu}</li>*/}
+                    : null
+                    }
+                    <ul className="main-menu">
+                        <MainMenu {...this.props} />
+                        {
+                            this.props.user && !!this.props.user.authed
+                                ? <li>
+                                    <Link to="/logout">
+                                        <div className="icon-w">
+                                            <div className="os-icon os-icon-signs-11"></div>
+                                        </div>
+                                        <span>Logout</span>
+                                    </Link>
+                                </li>
+                                : <li>
+                                    <LoginMenu/>
+                                </li>
+                        }
                     </ul>
                 </div>
 

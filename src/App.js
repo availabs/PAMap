@@ -78,7 +78,8 @@ class App extends Component {
                               key={i}
                               menuSettings={route.menuSettings ? route.menuSettings : {}}
                               menus={Routes.routes
-                                  .filter(f => route.auth === f.auth)}
+                                  //.filter(f => route.auth === f.auth)
+                              }
                                   //.filter(f => f.auth && f.authLevel ? f.authLevel <= this.props.user.authLevel : true)}
                               router={this.props.router}
                               routes={Routes.routes}

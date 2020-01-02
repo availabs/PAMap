@@ -3,7 +3,7 @@ import AvlMap from 'components/AvlMap';
 import PaEventsLayer from './layers/PaEventsLayer'
 
 let eventsLayer = PaEventsLayer()
-class Home extends Component {
+class PAMap extends Component {
   render () {
    return (
      <div style={{width: '100vw', height: '100vh'}}>
@@ -25,18 +25,20 @@ class Home extends Component {
 }
 
 export default {
-	path: '/pamap',
-	exact: true,
+    icon: 'os-icon os-icon-map',
+    path: '/',
+    exact: true,
+    name: 'PA Map',
+    auth: false,
+    //authLevel: 1,
 	mainNav: true,
-  menuSettings: {
+    menuSettings: {
     image: 'none',
     display: 'none',
     scheme: 'color-scheme-dark', 
     position: 'menu-position-top',
     layout: 'menu-layout-mini',
-    style: 'color-style-default'  
+    style: 'color-style-default'
   },
-  name: 'PA Map',
-	auth: false,
-	component: Home
+	component: PAMap
 }
