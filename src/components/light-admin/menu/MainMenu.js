@@ -13,7 +13,7 @@ class MainMenu extends Component {
       .filter(menu => menu.mainNav)
       .filter(menu => !menu.auth || this.props.authed)
       .map((menu, index) => {
-        console.log('mainmenu',menu.path.split('/'), this.props.path.split('/'), menus)
+        //console.log('mainmenu',menu.path.split('/'), this.props.path.split('/'), menus)
         let topMenu = menu.path ? menu.path.split('/')[1] : ''
         let currentTop = this.props.path ? this.props.path.split('/')[1] : ' ' 
         let isActive = topMenu === currentTop
