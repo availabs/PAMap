@@ -11,8 +11,12 @@ class PAEventsLayer extends MapLayer {
   onAdd(map){
       let local_estimate = [];
       EventSource.source.data.features.forEach(item =>{
-          item.properties['LOCAL ESTIMATE'] = parseFloat(item.properties['LOCAL ESTIMATE'].replace(/,/g, '')) || "0"
-          local_estimate.push(item.properties['LOCAL ESTIMATE'])
+          if(item.properties['LOCAL ESTIMATE']){
+              console.log(item.properties['LOCAL ESTIMATE'])
+              item.properties['LOCAL ESTIMATE'] = parseFloat(item.properties['LOCAL ESTIMATE'].toString().replace(/,/g, '')) || "0"
+              local_estimate.push(item.properties['LOCAL ESTIMATE'])
+          }
+
       });
       map.addSource('events_source',EventSource.source);
       map.addLayer({
