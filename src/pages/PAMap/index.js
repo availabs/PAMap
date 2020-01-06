@@ -37,7 +37,7 @@ export default {
     display: 'none',
     scheme: 'color-scheme-dark', 
     position: 'menu-position-top',
-    layout: 'menu-layout-mini',
+    layout: 'menu-layout-compact',
     style: 'color-style-default'
   },
 	component: PAMap
