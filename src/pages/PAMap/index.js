@@ -6,7 +6,7 @@ let eventsLayer = PaEventsLayer()
 class PAMap extends Component {
   render () {
    return (
-     <div style={{width: '100vw', height: '100vh'}}>
+     <div style={{width: '100vw', height: `calc(100vh)`, paddingTop: 50}}>
 
        <AvlMap
         layers={[eventsLayer]}
@@ -16,6 +16,7 @@ class PAMap extends Component {
           -75.60791015625,
           42.76314586689492
         ]}
+        boxZoom={true}
        /> 
 
      </div>
@@ -25,14 +26,13 @@ class PAMap extends Component {
 }
 
 export default {
-    icon: 'os-icon os-icon-map',
-    path: '/',
-    exact: true,
-    name: 'PA Map',
-    auth: false,
-    //authLevel: 1,
-	mainNav: true,
-    menuSettings: {
+  path: '/',
+  name: 'Event Map',
+  icon: 'os-icon os-icon-map',
+  exact: true,
+  auth: false,
+  mainNav: true,
+  menuSettings: {
     image: 'none',
     display: 'none',
     scheme: 'color-scheme-dark', 
