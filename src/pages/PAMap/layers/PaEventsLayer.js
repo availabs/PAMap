@@ -10,19 +10,17 @@ import {
   scaleThreshold
 } from "d3-scale"
 
-const tmpObj = {};
+import { fnum } from 'utils/sheldusUtils'
+import summary from './summary'
+
+
 
 class PAEventsLayer extends MapLayer {
   onAdd(map){
-      let local_estimate = [];
-      EventSource.source.data.features.forEach(item =>{
-          item.properties['LOCAL ESTIMATE'] = parseFloat(item.properties['LOCAL ESTIMATE'].replace(/,/g, '')) || 0
-          local_estimate.push(item.properties['LOCAL ESTIMATE'])
-      });
+      
       map.addSource('events_source',EventSource.source);
-      console.log('events_source', EventSource.source.data.features.forEach(d => console.log(d, d.properties['LOCAL ESTIMATE'])))
-      console.log('local estimate', local_estimate)
-
+      // console.log('events_source', EventSource.source.data.features.forEach(d => console.log(d, d.properties['local_estimate'])))
+      //console.log('local_estimate', local_estimate)
 
       map.addLayer({
           id: 'events_layer',
@@ -30,7 +28,7 @@ class PAEventsLayer extends MapLayer {
           source: 'events_source',
           paint: {
               'circle-radius': 
-              ["step",["get","LOCAL ESTIMATE"],
+              ["step",["get","local_estimate"],
               2,
               0,
               3,
@@ -47,13 +45,13 @@ class PAEventsLayer extends MapLayer {
               //     'interpolate',['linear'],['zoom'],
               //     10,
               //     ['/',
-              //      ['number', ['get', 'LOCAL ESTIMATE'], 1000],
+              //      ['number', ['get', 'local_estimate'], 1000],
               //       100000]
               // ],
-                  //["get", ["to-string", ["get", "LOCAL ESTIMATE"]], ["literal",tmpObj]],
+                  //["get", ["to-string", ["get", "local_estimate"]], ["literal",tmpObj]],
               'circle-opacity': 0.8,
               'circle-color':
-              ["step",["get","LOCAL ESTIMATE"],
+              ["step",["get","local_estimate"],
                   "#fcffff",
                   0,
                   "#fcbba1",
@@ -97,17 +95,51 @@ const PaLayer = (options = {}) =>
       dataFunc: function(topFeature, features) {
         //const { id } = topFeature.properties;
         return  [
-          ["County", topFeature.properties.COUNTY],
+          ["County", topFeature.properties.county],
+          ["Site #", topFeature.properties.site_number],
           ["Applicant", topFeature.properties.APPLICANT],
-          ["Damage Estimate", "$"+topFeature.properties['LOCAL ESTIMATE'].toLocaleString()],
-          ["FEMA Validated", "$"+Object.values(topFeature.properties)[7]],
+          ["Damage Estimate", "$"+topFeature.properties['local_estimate'].toLocaleString()],
+          ["FEMA Validated", "$"+topFeature.properties['fema_validated'].toLocaleString()],
           ["Description",null],
-          [topFeature.properties['DAMAGE DESCRIPTION']]
+          [topFeature.properties['damage_description']]
         ];
        
       }
+    },
+    infoBoxes:{
+      Overview: {
+        title: "",
+        comp: (props={}) =>{
+          let totalNum = 0
+          let totalEst = 0
+          let totalFEMA = 0
+          return (
+          <div>
+            <table className='table table-sm'>
+              <thead><tr><th>Cnty</th><th>Rpts</th><th>Est. Dmg $</th><th>FEMA Val. $</th></tr></thead>
+              <tbody>
+                {Object.values(summary).map(d => {
+                  totalNum += d.reports
+                  totalEst += d.local_estimate_total
+                  totalFEMA += d.fema_validated_total
+                  return (
+                  <tr>
+                    <td>{d.county}</td>
+                    <td>{d.reports}</td>
+                    <td>{fnum(d.local_estimate_total)}</td>
+                    <td>{fnum(d.fema_validated_total)}</td>
+                  </tr>
+                  )})
+                }
+                
+            </tbody>
+            <tfoot><tr style={{fontWeight: 600}}><td>Total</td><td>{totalNum}</td><td>{fnum(totalEst)}</td><td>{fnum(totalFEMA)}</td></tr></tfoot>
+            </table>
+          </div>
+        )},
+        show: true
+      }
     }
-
 })
 
 export default PaLayer

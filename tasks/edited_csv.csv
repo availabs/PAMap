@@ -1,6 +1,6 @@
 county,site_number,date_visited,applicant,damage_location,damage_description,local_estimate,fema_validated,change_notes,unvalidated,,,,,
  CHAUTAUQUA,1,11/9/2019,City of Dunkirk,"Dunkirk Harbor, West Side
-130 W. Lake Shore Dr. 42.4865, -79.8432",550 LF of large rip rap displaced by strong wind & high surf and portions of retaining wall & hand railings intermittingly shifted.,"$1,000,000",$0,No storm damage identified.  The applicant proposes an extension of preexisting rip-rap armoring to the lake wall; appears to be a mitigation project.,,,,,,
+130 W. Lake Shore Dr. 42.4865, -79.3432",550 LF of large rip rap displaced by strong wind & high surf and portions of retaining wall & hand railings intermittingly shifted.,"$1,000,000",$0,No storm damage identified.  The applicant proposes an extension of preexisting rip-rap armoring to the lake wall; appears to be a mitigation project.,,,,,,
  CHAUTAUQUA,2,11/9/2019,City of Dunkirk,"Dunkirk Harbor, East Side
 68 N. Beagle Street 42.4920, -79.3270","Over the span of approx. 3000 LF-approx. 22 concrete blocks (8'L x 2' W x 2' D) located on the retaining wall were displaced , along with approx. 500 LF of concrete rail support block (8'L x 3' W x 6"" D).","$1,000,000","$750,000",,,,,,,
  CHAUTAUQUA,3,11/19/2019,City of Dunkirk,"Dunkirk Harbor East Side, Dunkirk, NY 42.491438, -79.327940","Jersey Barriers (860 FT) placed as EPM along damaged lake wall, rented for the duration of repairs - 6 months",,"$15,000",,,,,,,
@@ -239,43 +239,41 @@ ERIE,6,11/8/2019,Erie County,"Botanical Gardens
 2X51 South Park Ave, Buffalo
 42.8281, -78.8261",High winds lifted the edge of the top row of specialized greenhouse glass panels that are air operated and damaged beyond repair (bldg. 8D). Estimate per County Eng.,"$10,000","$10,000",,,,,,,
 ERIE,7,11/8/2019,Erie County,"Erie Basin Marina
-42.8844, -78,8905","On the marina access road, northen end roundabout, high wind driven wave action caused the asphalt surface to lift off intermittingly and lifted concrete curbing (Cat C - $7,500). Also, deposited approx. 75 cy of woody debris (Cat A - $2,500).","$10,000","$10,000",,,,,,,
+42.8844, -78.8905","On the marina access road, northen end roundabout, high wind driven wave action caused the asphalt surface to lift off intermittingly and lifted concrete curbing (Cat C - $7,500). Also, deposited approx. 75 cy of woody debris (Cat A - $2,500).","$10,000","$10,000",,,,,,,
 ERIE,8,11/8/2019,Town of Evans,"Sturgeon Point Marina
 618 Sturgeon Point Rd.
 42.6909, -79.0472","The Sturgeon Point Marina was heavily damaged by high wind driven wave action depositing approx. 300 cy of woody debris throughout the facility ($100,000) and deposited approx. 20,000 cy of sand/sediment ($300,000) essentially closing off the marina entrance/exit to the lake.","$400,000","$318,000",,,,,,,
 ERIE,9,11/8/2019,Town of Evans,"Point Breeze Beach
 9568 Old Lake Shore Rd, Angola
 42.6253,-79.0947","High wind driven lake waters pushed lake sand & sediment across the beach front and reconfigured the stream water flowing into the lake. The pedestrian bridge, across the stream, concrete abutments were undermined below the bottom of the concrete  weakening the structure.","$300,000","$300,000",,,,,,,
-ERIE,10,11/8/2019,Town of Hamburg,"Hoover Rd near 4100 Lake Shore Rd 42.7735, -78.8639","Wind and wind driven waves upheaved concrete walkway (30'L x 10'Wx 16"" D), along with armoring and removed approx. 80' L x 2' W x 2' D of shoulder north of the walkway along Hoover Rd.","$60,000",,,,,,,,
+ERIE,10,11/8/2019,Town of Hamburg,"Hoover Rd near X100 Lake Shore Rd 42.7735, -78.8639","Wind and wind driven waves upheaved concrete walkway (30'L x 10'Wx 16"" D), along with armoring and removed approx. 80' L x 2' W x 2' D of shoulder north of the walkway along Hoover Rd.","$60,000",,,,,,,,
 ERIE,11,11/8/2019,Town of Hamburg,"151 Mid-Shore Dr.
-42.7793, - 78.8588",This vacant lot is owned by the Town of Hamburg. The concrete retaining wall and slab were undermined and lifted from the strong wind driven waves. The damaged area is 40' L x 20' W x 10' D- doubled.,"$150,000","$209,000",,,,,,,
+42.7793, -78.8588",This vacant lot is owned by the Town of Hamburg. The concrete retaining wall and slab were undermined and lifted from the strong wind driven waves. The damaged area is 40' L x 20' W x 10' D- doubled.,"$150,000","$209,000",,,,,,,
 ERIE,12,11/8/2019,Town of Hamburg ,"152 Mid-Shore Dr.
 42.7791, -78.8594",The area surrounding a drain sewer in the street was undermined. ,"$7,500","$8,500",,,,,,,
 ERIE,13,11/20/2019,Town of Hamburg,Hoover Beach Association,"Debris Removal from town of Hamburg Park (7500 cy of debris) (on the lake) NYSDHSES estimated damages, site was not visited by FEMA.","$25,000","$25,000",,,,,,,
 ERIE,14,11/20/2019,Town of Hamburg,"Hamburg Town Park
-4420 Lake Shore Road
+XX20 Lake Shore Road
 42.764674, -78.877587",Dredging of the boat ramps (launches) at the north end of the town park.,"$60,000","$60,000",,,,,,,
 ERIE,15,11/20/2019,Town of Hamburg,"Hamburg Town Park
-4420 Lake Shore Road
+XX20 Lake Shore Road
 42.764674, -78.877587","Debris Removal from town of Hamburg Park (7500 cy of debris) (on the lake) NYSDHSES estimated damages, site was not visited by FEMA.","$150,000","$150,000",,,,,,,
- ESSEX,1,11/14/2019,Essex County DPW,"CR24 Hoffman Rd
+ ESSEX,1,11/14/2019,Essex County DPW,"CR2X Hoffman Rd
 43.8415, -73.7864",Roadway undermining & repair with ditching; 345 lf of road; road open to one lane,"$25,000",,,,,,,,
- ESSEX,2,11/14/2019,Essex County DPW,"CR24 Hoffman Rd
+ ESSEX,2,11/14/2019,Essex County DPW,"CR2X Hoffman Rd
 43.8248, -73.9203",Roadway undermining & repair with ditching; 275 lf of road; road open to one lane,"$55,000",,,,,,,,
- ESSEX,3,11/15/2019,Essex County DPW,"CR34 Trout Brook Rd
-43.7767, -73.8992 
-(Adjacent to county bridge, BIN 3302720); In Minerva (T)",Ditching and shoulder repairs (approx. 200' L x 4' W x2' D); asphalt patching still needs to be addressed.,"$35,000",,,,,,,,
- ESSEX,4,11/14/2019,Essex County DPW,"CR4 Ensign Pond Rd
+ ESSEX,3,11/15/2019,Essex County DPW,"CR3X Trout Brook Rd
+43.7767, -73.8992","$35,000",,,,,,,,
+ ESSEX,4,11/14/2019,Essex County DPW,"CRX Ensign Pond Rd
 44.0388, -73.5733","Temporary repairs to 50' of embankment, 30' deep with riprap and stones","$25,000",,,,,,,,
- ESSEX,5,11/14/2019,Essex County DPW,"CR4 Ensign Pond Rd
+ ESSEX,5,11/14/2019,Essex County DPW,"CRX Ensign Pond Rd
 44.0388, -73.5733",Engineer estimate of slope failure (see entry above); retaining structure or sheetpiling needed.,"$394,000",,,,,,,,
- ESSEX,6,11/14/2019,Essex County DPW,"CR4 Ensign Pond Rd
+ ESSEX,6,11/14/2019,Essex County DPW,"CRX Ensign Pond Rd
 Entire length of road","Misc shoulder washouts, ditch & pavement repairs; entire length of road (12.59 Mi.)","$10,000",,,,,,,,
- ESSEX,7,11/15/2019,Essex County DPW,"CR43 Shore Airport Rd
-(In Ticonderoga);
-Pipe 1: 43.8711, -73.4014
-Pipe 2:  43.8785, -73.3982
-Pipe 3:  43.8863, -73.4035",One section of 5' HDPE pipe added at the inlet and outlet ends on two of the pipes. Downstream ditching and riprap added. Work done by a contractor (80% complete). ,"$138,000",,,,,,,,
+ ESSEX,7,11/15/2019,Essex County DPW,"CRX3 Shore Airport Rd
+
+43.8711, -73.4014
+",One section of 5' HDPE pipe added at the inlet and outlet ends on two of the pipes. Downstream ditching and riprap added. Work done by a contractor (80% complete). ,"$138,000",,,,,,,,
  ESSEX,8,11/14/2019,Essex County DPW,"CR6 Tracy Rd
 44.0763, -73.6531",400 lf of shoulder & pavement undermining with ditching; culvert and asphalt repair; 80% complete by contractor.,"$32,000",,,,,,,,
  ESSEX,9,11/14/2019,Essex County DPW,"CR6 Tracy Rd
@@ -291,12 +289,11 @@ entire length of road","Misc shoulder washouts, ditch & pavement repairs; entire
  ESSEX,14,11/14/2019,Essex County DPW,"CR78 Johnson Pond Rd
 Entire length of road","Misc shoulder washouts, ditch & pavement repairs for entire road (3.18 miles); FA labor","$30,000",,,,,,,,
  ESSEX,15,11/14/2019,Essex County DPW,"Lobdell Bridge
-BIN 3301640 
 44.1897, -73.6146",West side bridge abutment washout and failure; Panel type bridge being repaired by contractor; Lobdell Lane,"$50,000",,,,,,,,
  ESSEX,16,11/15/2019,Town of Minerva,"Gochie Rd
 43.7767, -73.8992",Road washout; 90' L x 20' W x 2' D. FA labor and equipment used in repair. Gravel road.,"$10,000","$10,000",,,,,,,
  ESSEX,17,11/15/2019,Town of Minerva,"Northwoods Club Rd
-43.8132, -74.0392
+43.8132, -74.0392 TO
 43.8108, -740144                ",2 culverts replaced; gravel backfill with asphalt pavement. Work done by FA labor with private haul trucks. ,"$35,000","$35,000",,,,,,,
  ESSEX,18,11/15/2019,Town of Minerva,"Northwoods Club Rd
 43.8178, -74.0527",3 miles of road with intermittent damages; 2 areas of slope failures. Work is about 20% done.,"$100,000","$100,000",,,,,,,
@@ -305,12 +302,12 @@ BIN 3301640
  ESSEX,20,11/15/2019,Town of Minerva,"Ridge Rd
 43.8007, -73.9967","Two areas of road washouts, each about 500' long. Some undermining of the road with shoulder and ditch damages. One section is gravel and one is paved. FA labor with private haul trucks used.","$40,000","$40,000",,,,,,,
  ESSEX,,11/18/2019,Essex County DPW,"CR 69, Hulls Falls Rd, Town of Keene, GPS coordinates taken near the midpoint of the road; 44.2437, -73.7986",Entire road affected with misc shoulder washouts and roadway undermining.,"10,000",,,,,,,,
- ESSEX,,11/18/2019,Town of Elizabethtown,"Brainards Forge Rd, 400' north of the NYS Rte 9N intersection; 44.2107, -73.5321",20' section of 3' hdpe pipe replaced by a contractor. Shoulder washout (about 40' long) with slope failure 25' W x 15' H x 3' D; pavement undermining and patched.,"25,000","$25,000",,,,,,,
+ ESSEX,,11/18/2019,Town of Elizabethtown,"Brainards Forge Rd, X00' north of the NYS Rte 9N intersection; 44.2107, -73.5321",20' section of 3' hdpe pipe replaced by a contractor. Shoulder washout (about 40' long) with slope failure 25' W x 15' H x 3' D; pavement undermining and patched.,"25,000","$25,000",,,,,,,
  ESSEX,,11/18/2019,Town of Westport,"Mtn Spring Rd, entire length of road affected","Contractor estimate for repairs to the gravel road which included gravel, culverts to be replaced and extensive ditching to be done. Due to the recent snow in the area, accessibilty to visit the site was not possible.","57,500","$57,500",,,,,,,
  ESSEX,,11/18/2019,Essex County DPW,"CR 44, Stevenson Rd, 5 sites identified; intermittent damage sites for the length of the road.","Site A: 44.1548, -73.4506, 6' CMP was not damaged but the up and downstream ends were washed out.   Site B: 44.1748, -73.4493, 3' hdpe pipe replaced with gravel &  pavement patch. Site C: 44.1292, -73.4503, 2' hdpe pipe replaced with gravel & pavement patching. Site D:44.1268, -73.4491, 2'hdpe pipe replaced with gravel & pavement patching. Site E: 44.1192, -73.4493, 30"" hdpe pipe replaced with gravel & pavement patching.","30,000",,,,,,,,
  ESSEX,,11/18/2019,Town of Moriah,"Port Henry Campground and Beach, at the end of Dock Lane on Lake Champlain; ",Extensive beach sand erosion throughout the campground property. Estimate of 4000 CY of material needed; some electric lines are now exposed on the property; additional damages may be present when the area is opened in the spring '20. Extensive sedimentation in Lake Champlain will be need to be addressed.,"250,000","$165,000",,,,,,,
- ESSEX,,11/18/2019,Town of Moriah,"Dock Lake, 44.0524, -73.4557, East of NYS Rte 9N (north end of the Hamlet of Port Henry).",Road washout by a lift station. No apparent damages to the lift station. Approx. 40' L x 4' D x 20' W.,"25,000","$25,000",,,,,,,
- ESSEX,,11/18/2019,Essex County DPW,"CR 54, Pilfershire Road, entire length of road affected (approx. 3 miles); 44.0796, -73.4915 coordinates taken by the Cheney Rd intersection.",Intermittent shoulder washouts with some pavement repairs needed.,"22,000",,,,,,,,
+ ESSEX,,11/18/2019,Town of Moriah,"Dock Lake, 44.0524, -73.4557",Road washout by a lift station. No apparent damages to the lift station. Approx. 40' L x 4' D x 20' W.,"25,000","$25,000",,,,,,,
+ ESSEX,,11/18/2019,Essex County DPW,"CR 5X, Pilfershire Road, entire length of road affected (approx. 3 miles);  coordinates taken by the Cheney Rd intersection. 44.0796, -73.4915",Intermittent shoulder washouts with some pavement repairs needed.,"22,000",,,,,,,,
  ESSEX,,11/18/2019,Essex County DPW,"CR 70, Witherbee Rd, 44.0898, -73.5373",Roadway undermining (40' L x 3' W x 3' D) and washout with a slope failure (12' H x 25' L x 3' D; with pavement patching (4' W x 30' L).,"30,000",,,,,,,,
  ESSEX,,,,,"1. CR6 Tracy Rd 44.0763, -73.6531 400 lf. of shoulder & pavement undermining with ditching; culvert and asphalt repair; 80% complete by contractor.
 2. CR6 Tracy Rd 44.0784, -73.6077 6' diameter culvert washout; 1400' of road repair and ditchwork, with riprap by contract; 100% complete. Second culvert added, culvert 3 foot diameter to 6 foot diameter installed.
@@ -321,18 +318,7 @@ BIN 3301640
 7. CR 44, Stevenson Rd, 5 sites identified; intermittent damage sites for the length of the road. Site A: 44.1548, -73.4506, 6' CMP was not damaged, but the up and downstream ends were washed out.   Site B: 44.1748, -73.4493, 3' HDPE pipe replaced with gravel & pavement patch. Site C: 44.1292, -73.4503, 2' HDPE pipe replaced with gravel & pavement patching. Site D:44.1268, -73.4491, 2'HDPE pipe replaced with gravel & pavement patching. Site E: 44.1192, -73.4493, 30 HDPE pipe replaced with gravel & pavement patching. Note: validation supplied for work completed thus far - 24K before fringe.
 8. CR 54, Pilfershire Road, entire length of road affected (approx. 3 miles); 44.0796, -73.4915 coordinates taken by the Cheney Rd intersection. Intermittent shoulder washouts with some pavement repairs needed.
 9. CR 70, Witherbee Rd, 44.0898, -73.5373 Roadway undermining (40' L x 3' W x 3' D) and washout with a slope failure (12' H x 25' L x 3' D; with pavement patching (4' W x 30' L).",,"$404,000",,,,,,,
- ESSEX,,,,,"1. CR24 Hoffman Rd - 43.8415, -73.7864 - Roadway undermining & repair with ditching; 345 lf of road; road open to one lane
-2. CR24 Hoffman Rd - 43.8248, -73.9203 - Roadway undermining & repair with ditching; 275 lf of road; road open to one lane
-3. CR34 Trout Brook Rd - 43.7767, -73.8992 (Adjacent to county bridge, BIN 3302720); In Minerva (T) - Ditching and shoulder repairs (approx. 200' L x 4' W x2' D); asphalt patching still needs to be addressed.
-4. CR4 Ensign Pond Rd - 44.0388, -73.5733 - Temporary repairs to 50' of embankment, 30' deep with riprap and stones (might be federal highway road) Applicant estimates $25,000
-5. CR4 Ensign Pond Rd 44.0388, -73.5733 - Engineer estimate of slope failure (see entry above); retaining structure or sheetpiling needed (might be federal highway road) Applicant estimates $394,000
-6. CR4 Ensign Pond Rd Entire length of road - Misc shoulder washouts, ditch & pavement repairs; entire length of road (12.59 Mi.) (might be federal highway road) Applciant estimates $10,000
-7. CR43 Shore Airport Rd (In Ticonderoga);  Pipe 1: 43.8711, -73.4014 Pipe 2:  43.8785, -73.3982
-Pipe 3:  43.8863, -73.4035 - One section of 5' HDPE pipe added at the inlet and outlet ends on two of the pipes. Downstream ditching and rip-rap added. Work done by a contractor (80% complete). (might be federal highway road) Applicant estimates $138K but it is not included in this total
-8. CR78 Johnson Pond Rd 43.9492, -73.7051 - Pavement undermining and shoulder work needed for 75'; FA labor
-9. CR78 Johnson Pond Rd 43.9561, -73.7227 - Culvert, underdrain installation, 500' (approx) of road failure; FA labor, 90% complete
-10. CR 69, Hulls Falls Rd, Town of Keene, GPS coordinates taken near the midpoint of the road; 44.2437, -73.7986
-Entire road affected with misc shoulder washouts and roadway undermining.",,"$190,000",,,,,,,
+ ESSEX,,,,,"1. CR2X Hoffman Rd - 43.8415, -73.7864",,"$190,000",,,,,,,
  ESSEX,,11/22/2019,Town of Schroon,"Emerson Road, approx. 800' north of CR 24, the Hoffman Road.","2, 4' diameter x 40' long culverts destroyed in a triple pipe water passage. Temporary repairs done with  pipes obtained from Essex County DPW. ","$15,000",,,,,,,,
  ESSEX,,11/22/2019,Town of Schroon,"Emerson Road, approx. 800' north of CR 24, the Hoffman Road.",The permanent repair may require the installation of a box culvert or even a bridge.,"$100,000",,,,,,,,
  ESSEX,,11/22/2019,Town of Schroon,"Beech Hill Road, beginning at CR 24, the Hoffman Road heading south for about .3 of a mile.",Intermittent damages to the gravel road to a depth of 3' and up to 10' wide through the 1500 feet of road affected. Estimated that 50% of the work has been done.,"$10,000",,,,,,,,
@@ -343,7 +329,7 @@ Entire road affected with misc shoulder washouts and roadway undermining.",,"$19
  ESSEX,,11/22/2019,Town of Moriah,"Crowfoot Lane, 1.5 miles of the road was damaged intermittently beginning at the east end.",About 6' of the 18' wide road was damaged of up to 2' deep. Additional work needs to be done in the spring.,"$75,000",,,,,,,,
  ESSEX,,11/26/2019,Essex County DPW,"CR 25, Upper Works Rd (Newcomb)  Begin:44.0812,-74.0553   End:44.0609, -74.0631 ",Intermittent shoulder and Ditch washouts; approx. 30% complete. Up to 2' of undermining of the pavement.    Culvert replacement (2' diameter x 40' hdpe) with 26' x 20' asphalt patching.   Culvert installed by a contractor. Town of Newcomb did some emergency work here.,"$50,000",,,,,,,,
  ESSEX,,11/26/2019,Essex County DPW,"CR 25, Tahawus Rd (Newcomb)  43.5970, -74.0544",Shoulder repair and a slope failure (30' x 15' x 10 '); stone obtained from the mine up the road. All work done by a contractor.  Town of Newcomb did some emergency work here.,"$30,000",,,,,,,,
- ESSEX,,11/26/2019,Essex County DPW,"CR 84, Blue Ridge Rd, Forever Wild Section  Begin:43.9442, -73.9520                                 End:43.9482, -73.9383","Intermittent shoulder and ditch washouts; south side of road. Some undermining of the pavement; erosion up to 2' deep. Estimate, 20% complete. Repairs done by force account and town crews. This is a Federal Aid road. - $30,000",,,,,,,,,
+ ESSEX,,11/26/2019,Essex County DPW,"CR 8X, Blue Ridge Rd, Forever Wild Section  Begin:43.9442, -73.9520                                TO 43.9482, -73.9383","Intermittent shoulder and ditch washouts; south side of road. Some undermining of the pavement; erosion up to 2' deep. Estimate, 20% complete. Repairs done by force account and town crews. This is a Federal Aid road. - $30,000",,,,,,,,,
  ESSEX,,11/26/2019,Town of Moriah,"Lang Rd, 44.0093, -73.4887",Seasonal gravel road approx .4 miles long. 0% complete; force account labor and equipment to be used in the repair. Regrading of road and ditching needed.,"$15,000",,,,,,,,
  ESSEX,,11/26/2019,Town of Moriah,"Silver Hill Rd, 44.0769, -73.5395","Force account labor and equipment along with a contractor. Road edge undermining with shoulder washout and ditch erosion. Road washout up to 3' deep. Roadway patch 10' x 100' x 4"" thick of asphalt. 50% complete.","$15,000",,,,,,,,
  FULTON,1,11/12/2019,Town of Caroga,"Kasson Road
@@ -404,7 +390,7 @@ HAMILTON,5,11/7/2019,Hamilton County,"CR 11 South Shore Road
 43.463324, -74.387444","Intermittent damage in ditches and complete lane damaged. Culvert washouts, mostly damage on ends.","$400,000",,,,,,,,
 HAMILTON,6,11/7/2019,Hamilton County,"Haskel Road Bridge
 43.458979, -74.5215",County Bridge on town road. Abutments washed out.,"$750,000","$350,000",,,,,,,
-HAMILTON,7,11/7/2019,Hamilton County,CR 24 Old Pisceo Road,"Intermittent Damage; culverts overtoped by several feet, washed out one side, ditch erosion.","$25,000",,,,,,,,
+HAMILTON,7,11/7/2019,Hamilton County,CR 2X43.201115 Old Pisceo Road,"Intermittent Damage; culverts overtoped by several feet, washed out one side, ditch erosion.","$25,000",,,,,,,,
 HAMILTON,8,11/7/2019,Hamilton County,"Fayle Road Bridge
 43.398313, -74.765511",Bridge closed. Truss bridge overtopped by several feet. Washed out one side. Bridge over West Canada Creek.,"$1,000,000","$450,000",,,,,,,
 HAMILTON,9,11/7/2019,Hamilton County,CR 17 French Raod,Intermittent washouts and ditch erosion. Culvert ends eroded.,"$5,000",,,,,,,,
@@ -441,7 +427,7 @@ HAMILTON,33,11/21/2019,Town of Lake Pleasant,"Page St.
 43.5047 , -74.3843 to
 43.5096 , -74.3806","paved road. Ditches overflowed. Culverts plugged and overtoped; 5 cleaned out, 2 - 24"" culverts replaced. Lost approx. 1500 feet of road at least 1 lane wide for a depth of 2 to 3 feet. Town if rsonsible to back of ditch, thus had to replace multipal driveway culvertsand entrances.","$200,000",,,,,,,,
 HAMILTON,34,11/21/2019,Town of Lake Pleasant,"Hamilton lake Raod
-43.507974 , -74.3711 start
+43.507974, -74.3711
 ","Dirt road. Ditches were overtopped and approx 1000 ft of road ( intermittent damaged sections) washed out up to 5 feeet deep. Some fill permanent and other temporary.
 Paved sections similar damage, another 1000 ft damaged.","$125,000",,,,,,,,
 HAMILTON,35,11/21/2019,Town of Lake Pleasant,Fish Mountain Road,"Old laid up stone culvert, 5 ft wide, extended with metal pipe. High flows from flooding separated pipes and one paveda lane damaged for approx. 50 ft. Shoulders eroded for 250 ft. Hydrant adjacant to cluvert need to be checked for damage.  ","$250,000",,,,,,,,
@@ -466,7 +452,7 @@ Info from applicant ","$29,000",,,,,,,,
 HAMILTON,45,11/21/2019,Town of Lake Pleasant,Kinler,"pavement washouts 
 Info from applicant ","$2,000",,,,,,,,
 HAMILTON,46,11/21/2019,Town of Arietta ,"Wild Rd
-43-25.700 , -74-30.738","6 ft culvert collects drainage from many lakes. Ovetopped Road and damaged shoulder , approx 100 ft long. Condition of pavement in questionable condition","$100,000",,,,,,,,
+43.25700 , -74.30738","6 ft culvert collects drainage from many lakes. Ovetopped Road and damaged shoulder , approx 100 ft long. Condition of pavement in questionable condition","$100,000",,,,,,,,
 HAMILTON,47,11/21/2019,Town of Arietta ,Haskells Road,"Road of either side of County bridge were washed out by flood water of West Canada Creek. 150 ft of dirt  road eroded up to 6 ft deep. Gravel parking area 150 by 150 ft wide Eroded. Other side of bridge wiath pavement only had shoulder erosion for approx 100ft
 Information based on review of applicants photos. Access to major damge not available due to construction activities.","$50,000",,,,,,,,
 HAMILTON,48,11/21/2019,Town of Arietta ,South Shore Road,"Ditches overflowed and eoded shoulde and widened area about  100 by 6 ft about 1 ft deep
@@ -489,7 +475,7 @@ Note: Village has not inspected storm lines and other below ground facility","$4
 Street addresses near damage: 137, 155, 167, & 185 Dairy Hill Rd. Also damage near the northern end of Mang Road.","$614,420","$614,420",,,,,,,
  HERKIMER,3,11/6/2019,Herkimer County,"Gray Wilmurt Road Bridge
 43.263751, -74.946573","Concrete bridge structure - 20 ft width, 40 ft length & wingwalls","$789,910","$789,910",,,,,,,
- HERKIMER,4,11/12/19,Herkimer County DPW,"Hopson Road Bridge County Route 164
+ HERKIMER,4,11/12/19,Herkimer County DPW,"Hopson Road Bridge County Route 16X
 43.123107, -74.774878","The Herkimer County DPW detailed estimate, is attached to the SitRep.  It can also be found with the Hopson Road photo file in the P-Drive.","$601,690.00 ","$601,690",,,,,,,
  HERKIMER,5,11/6/2019,Town of Fairfield,"Farrington Road
 43.164792  -74.981422","* Stone and mortar bridge (100 + years), damaged and flagged by NY DOT as damged beyond repair
@@ -518,8 +504,7 @@ Estimate of probable cost $250,000.00, pending applicant confirmation of estimat
 Stabilize stream bank slope with heavy stone (160' X 23')
 This information was provided by NYR call.  Backup documentation sufficient so no site visit was required.","$135,000",,,,,,,,
  HERKIMER,13,11/6/2019,Town of Norway,"Military Road
-Start 43.203726, -74.941831
-End  43.201115 -74.935877","* Culvert pipe washout
+Start 43.203726, -74.941831 TO 43.201115,-74.935877","* Culvert pipe washout
 * 40 LF X 6 LF   Steel, circular metal pipe (replace)
 * second location 40 LF X 5 LF D, recovered, reset
 * Total associated road area 700 LF X 24 Ft ","$120,000","$120,000",,,,,,,
@@ -533,14 +518,11 @@ End  43.201115 -74.935877","* Culvert pipe washout
 43.201089, -74.93580","High velocity flood waters washed out an 800 FT section of road shoulders, along with a 
 500FT section of road surface.  A 30FT Long X 15FT Wide X 10FT Deep section of the road was also washed out, along with a 5FT X 40FT culvert. ","$180,000 ","$180,000",,,,,,,
  HERKIMER,17,11/12/19,Town of Norway,"Durand Road
-43.223028, -74.926290
-43.222980, -74.926821 ","High velocity flood waters washed out a 24"" X 40FT Culvert, that caused an 800 FT section of road shoulders to be washed out, along with the blacktop.","$14,000 ","$14,000",,,,,,,
+43.223028, -74.926290 TO 43.222980, -74.926821 ","High velocity flood waters washed out a 24"" X 40FT Culvert, that caused an 800 FT section of road shoulders to be washed out, along with the blacktop.","$14,000 ","$14,000",,,,,,,
  HERKIMER,18,11/12/19,Town of Norway,"Lynch Road
-43.222333, -74.963593
-43.221101, -74.979465","High velocity flood waters washed out aproximately 1.5 miles of road surface, along with the road shoulders, embankments and ditches.","$71,280 ","$71,280",,,,,,,
+43.222333, -74.963593 TO 43.221101, -74.979465","High velocity flood waters washed out aproximately 1.5 miles of road surface, along with the road shoulders, embankments and ditches.","$71,280 ","$71,280",,,,,,,
  HERKIMER,19,11/12/19,Town of Norway,"Military Road West
-43.220926, -74.983931
-43.228952, -75.000260","High velocity flood waters washed out approximately 2.5 miles of road surface, along with 18"" X 30FT Pipe.  Including it's head and tail walls and a 24"" x 30FT heavy steel pipe.","$135,000 ","$135,000",,,,,,,
+43.220926, -74.983931 TO 43.228952, -75.000260","High velocity flood waters washed out approximately 2.5 miles of road surface, along with 18"" X 30FT Pipe.  Including it's head and tail walls and a 24"" x 30FT heavy steel pipe.","$135,000 ","$135,000",,,,,,,
  HERKIMER,20,11/7/2019,Town of Ohio,Uncle Miere Road,* 300 LF X 20 FT W X 5 Ft D road surface and embankment washout over five extisting cross road culvert pipes.   ,"$18,000","$18,000",,,,,,,
  HERKIMER,21,11/7/2019,Town of Ohio,"Atwood Lake Road
 43.366180, -74.892565","* Three (120 LF X 10 FT H X 14 FT W, approx) squash pipes, metal washed out
@@ -598,9 +580,7 @@ Projection of probable cost @ $25/LF.","$25,000 ","$25,000",,,,,,,
 JEFFERSON,1,11/14/2019,Jefferson County Highway,County wide road signs,Approximately 200 road signs were blown down/damaged on various roads throughout the County.,"$13,000","$13,000",,,,,,,
 JEFFERSON,2,11/14/2019,Jefferson County Highway,County wide roads,County wide Debris Removal on County roads.,"$60,000","$60,000",,,,,,,
 JEFFERSON,3,11/12/2019,Town of Cape Vincent,"Dablon Point Rd (Site 1)
-44.084166, -76.347222 to 44.083888,  -76.348055
-Dablon Point Rd (Site 2)
-44.0822, -76.366666 to 44.078333, -76.371944","Damaged road surface, subbase, blacktop and shoreline base rock erosion. ","$125,000.00","$100,000",,,,,,,
+44.084166, -76.347222 to 44.083888,  -76.348055","Damaged road surface, subbase, blacktop and shoreline base rock erosion. ","$125,000.00","$100,000",,,,,,,
 JEFFERSON,4,11/12/2019,Town of Cape Vincent,"Wilson Point Rd
 44.092777, -76.349722 to 44.087777, -76.343888 ","Damaged road surface, subbase, blacktop and shoreline base rock erosion
 Dollar amount is included in Dabion Point Road",,"$25,000",,,,,,,
@@ -613,9 +593,7 @@ JEFFERSON,7,11/13/2019,Town of Lyme,"South Shore Rd
 JEFFERSON,8,11/13/2019,Town of Lyme,"South Shore Rd
 43.97264, -76.24601 to 43.9675, -76.2587",Heavy wave action on Lake Ontario caused damage to culverts,see Town total,"$6,000",,,,,,,
 JEFFERSON,9,11/13/2019,Town of Lyme,"South Shore Rd
-#1 43.96227, -76.2709,       
-#2 43.961.65, -76.27226, 
-#3 43.96154, -76.27335","Heavy wave action on Lake Ontario overwashed roadway, deposited debris and damaged several culverts",see Town total,"$10,000",,,,,,,
+43.96227, -76.2709 TO 43.96165, -76.27226","Heavy wave action on Lake Ontario overwashed roadway, deposited debris and damaged several culverts",see Town total,"$10,000",,,,,,,
 JEFFERSON,10,11/13/2019,Town of Lyme,"South Shore Rd
 43.97427, -76.24263 to 43.98895, -76.22752",Heavy wave action on Lake Ontario deposited debris and damaged roadway,see Town total,"$10,000",,,,,,,
 JEFFERSON,11,11/14/2019,Village of Cape Vincent,ALL Village of Cape Vincent sites,"One estimate for all damage sites in this village, details of each location are listed below","$1,000,000",,,,,,,,

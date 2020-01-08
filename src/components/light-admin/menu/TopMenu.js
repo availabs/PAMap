@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 class Logo extends Component {
     render() {
-        return ('Mitigation Planner')
+        return ('Public Assitance MAP')
     }
 }
 

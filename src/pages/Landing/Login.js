@@ -85,7 +85,7 @@ class Login extends Component {
                         maxWidth: '650px'
                     }}>
 
-                        <h4 className="auth-header" style={{paddingTop: 20}}>Hazard Mitigation Planner
+                        <h4 className="auth-header" style={{paddingTop: 20}}>Public Assistance MAP
                             <br/><span style={{fontSize: '0.8em', fontWeight: 100, color:'#047bf8'}}>Login</span></h4>
 
                         <form onSubmit={this.handleSubmit}>
@@ -152,6 +152,13 @@ export default
     mainNav: false,
     name: 'Login',
     component: connect(mapStateToProps, mapDispatchToProps)(Login),
-    menuSettings: {hide: true}
+    menuSettings: {
+        image: 'none',
+        display: 'none',
+        scheme: 'color-scheme-dark', 
+        position: 'menu-position-top',
+        layout: 'menu-layout-compact',
+        style: 'color-style-default'
+    }
 }
 
