@@ -51,26 +51,7 @@ const DefaultLayout = ({component: Component, ...rest}) => {
                 }}
             />
         )
-        : (
-            checkAuthPlan(rest) ?
-                (
-                    <Redirect
-                        to={{
-                            pathname: "/" , //default pages
-                            state: {from: rest.router.location}
-                        }}
-                    />
-                )
-                : (
-                    checkAuthPage(rest) ?
-                        (
-                            <Redirect
-                                to={{
-                                    pathname: rest.userAuthLevel === 0  ? "/" : "/admin", //default pages
-                                    state: {from: rest.router.location}
-                                }}
-                            />
-                        ) : (   // if authed
+        : (   // if authed
                             <Route {...rest} render={matchProps => (
                                 <div className="layout-w" style={{minHeight: '100vh'}}>
                                     <Menu {...rest} />
@@ -82,8 +63,7 @@ const DefaultLayout = ({component: Component, ...rest}) => {
                                     </div>
                                 </div>
                             )}/>)
-                )
-        )
+
 
 };
 
@@ -94,7 +74,7 @@ function checkAuth(props) {
     return (props.auth && !props.authed)
 }
 
-function checkAuthPage(props) {
+/*function checkAuthPage(props) {
     let authlevel = props.authLevel !== undefined ? props.authLevel : 1;
     //console.log('checkAuthPage', (props.auth && !(props.authed && props.userAuthLevel >= authlevel)), props)
     return (props.auth && !(props.authed && props.userAuthLevel >= authlevel))
@@ -106,6 +86,6 @@ function checkAuthPlan(props) {
     // console.log('checkAuthPlan', props.auth , props.user.activePlan , props);
     return ['Plans', 'Home'].includes(props.name) ? false :
     (props.auth && props.user.activePlan && !(props.user.activePlan && props.user.authedPlans.includes(props.user.activePlan.toString())))
-}
+}*/
 
 export default DefaultLayout
