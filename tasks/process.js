@@ -88,10 +88,25 @@ fs.readFile(sample, "utf8", function(error, rawData) {
                 return d
 
               })
-              .filter(d => d.ll)
+              .filter(d => !d.ll)
 
-            // console.log('how many?', data.length, fixable) 
-            // console.log('how many with location', latLonData.length) 
+            //console.log('how many?', data.length, fixable) 
+            //console.log('how many with location', latLonData.length) 
+            
+            let totals = latLonData.reduce((out, curr) => {
+              let county = curr.county.trim()
+              out.local_estimate += isNaN(curr.local_estimate) ? 0 : curr.local_estimate;
+              out.fema_validated += isNaN(curr.fema_validated) ? 0 : curr.fema_validated;
+
+
+              return out;
+            },{local_estimate: 0, fema_validated: 0})
+
+            //console.log(totals)
+            console.log('county,site_number,applicant,damage_location,local_estimate,fema_validated')
+            latLonData.forEach(d => console.log(`${d.county.trim()}, ${d.site_number},${d.applicant},"${d.damage_location}",${d.local_estimate},${d.fema_validated}`))
+
+
             //let latLonDataNew = latLonData.reve
 
             // turn latLonData into geojson
@@ -100,19 +115,19 @@ fs.readFile(sample, "utf8", function(error, rawData) {
               features: []
             }
 
-            damageMap.features = latLonData.map(d => {
+            // damageMap.features = latLonData.map(d => {
 
 
-              return {
-                type: 'Feature',
-                properties: d,
-                geometry: {
-                  type: 'Point',
-                  coordinates: d.ll
-                }
+            //   return {
+            //     type: 'Feature',
+            //     properties: d,
+            //     geometry: {
+            //       type: 'Point',
+            //       coordinates: d.ll
+            //     }
 
-              }
-            })
-            console.log(JSON.stringify(damageMap))
+            //   }
+            // })
+            // console.log(JSON.stringify(damageMap))
 
  });

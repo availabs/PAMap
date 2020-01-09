@@ -115,7 +115,7 @@ const PaLayer = (options = {}) =>
           let totalFEMA = 0
           return (
           <div>
-            <table className='table table-sm'>
+            <table className='table table-sm table-hover'>
               <thead><tr><th>Cnty</th><th>Rpts</th><th>Est. Dmg $</th><th>FEMA Val. $</th></tr></thead>
               <tbody>
                 {Object.values(summary).map(d => {
