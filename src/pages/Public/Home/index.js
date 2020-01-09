@@ -16,7 +16,6 @@ class Public extends React.Component {
     }
 
     render() {
-        console.log('in home')
         return (
             <div>
                 <ElementBox>
@@ -41,8 +40,8 @@ export default [{
     path: '/public',
     exact: true,
     name: 'Public',
-    auth: false,
-    mainNav: false,
+    auth: true,
+    mainNav: true,
     breadcrumbs: [
         {name: 'Home', path: '/public'},
         {param: 'geoid', path: '/public/'}
