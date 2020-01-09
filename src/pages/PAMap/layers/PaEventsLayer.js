@@ -4,11 +4,20 @@ import MapLayer from "../../../components/AvlMap/MapLayer"
 import { register, unregister } from "../../../components/AvlMap/ReduxMiddleware"
 import { getColorRange } from "constants/color-ranges";
 import {EventSource} from './eventSource'
+import {
+  scaleQuantile,
+  scaleQuantize,
+  scaleThreshold
+} from "d3-scale"
 
-const tmpObj = {};
+import { fnum } from 'utils/sheldusUtils'
+import summary from './summary'
+
+
 
 class PAEventsLayer extends MapLayer {
   onAdd(map){
+
       let local_estimate = [];
       EventSource.source.data.features.forEach(item =>{
           if(item.properties['LOCAL ESTIMATE']){
@@ -18,34 +27,52 @@ class PAEventsLayer extends MapLayer {
 
       });
       map.addSource('events_source',EventSource.source);
+      // console.log('events_source', EventSource.source.data.features.forEach(d => console.log(d, d.properties['local_estimate'])))
+      //console.log('local_estimate', local_estimate)
+
       map.addLayer({
           id: 'events_layer',
           type: 'circle',
           source: 'events_source',
           paint: {
-              'circle-radius':[
-                  'interpolate',['linear'],['zoom'],
-                  10,
-                  ['/',
-                  ['-',2000000, ['number', ['get', 'LOCAL ESTIMATE'],2000000]],
-                  200000]
+              'circle-radius':
+              ["step",["get","local_estimate"],
+              2,
+              0,
+              3,
+              50000,
+              4,
+              100000,
+              6,
+              500000,
+              8,
+              1000000,
+              10
               ],
-                  //["get", ["to-string", ["get", "LOCAL ESTIMATE"]], ["literal",tmpObj]],
+              // [
+              //     'interpolate',['linear'],['zoom'],
+              //     10,
+              //     ['/',
+              //      ['number', ['get', 'local_estimate'], 1000],
+              //       100000]
+              // ],
+                  //["get", ["to-string", ["get", "local_estimate"]], ["literal",tmpObj]],
               'circle-opacity': 0.8,
-              'circle-color': ["step",["get","LOCAL ESTIMATE"],
-                  "#67000d",
+              'circle-color':
+              ["step",["get","local_estimate"],
+                  "#fcffff",
                   0,
                   "#fcbba1",
-                  400000,
+                  15000,
                   "#fb6a4a",
-                  800000,
+                  50000,
                   "#ef3b2c",
-                  1200000,
+                  100000,
                   "#cb181d",
-                  1600000,
+                  500000,
                   "#a50f15",
-                  2000000,
-                  "#000000"
+                  1000000,
+                  "#67000d"
 
               ]
 
@@ -62,30 +89,65 @@ const PaLayer = (options = {}) =>
     sources: [],
     layers: [],
     legend: {
-      title: 'PA Map',
+      title: 'October Storm 2019 Events',
+      subtitle: 'Test 123',
       type: "ordinal",
       types: ["ordinal"],
-      vertical: true,
-      range: ["#67000d","#fcbba1","#fb6a4a","#ef3b2c","#cb181d","#a50f15","#000000"],
+      //vertical: true,
+      range: ["#fcbba1","#fb6a4a","#ef3b2c","#cb181d","#a50f15","#67000d"],
       active: true,
-      domain: [0,400000,800000,1200000,1600000,2000000]
+      domain: ['$15k','$50k','$100k','$500k','$1M','']
     },
     popover: {
       layers: ["events_layer"],
       dataFunc: function(topFeature, features) {
         //const { id } = topFeature.properties;
         return  [
-          ["County", topFeature.properties.COUNTY],
+          ["County", topFeature.properties.county],
+          ["Site #", topFeature.properties.site_number],
           ["Applicant", topFeature.properties.APPLICANT],
-          ["Damage Estimate", "$"+Object.values(topFeature.properties)[6]],
-          ["FEMA Validated", "$"+Object.values(topFeature.properties)[7]],
+          ["Damage Estimate", "$"+topFeature.properties['local_estimate'].toLocaleString()],
+          ["FEMA Validated", "$"+topFeature.properties['fema_validated'].toLocaleString()],
           ["Description",null],
-          [topFeature.properties['DAMAGE DESCRIPTION']]
+          [topFeature.properties['damage_description']]
         ];
        
       }
-    }
+    },
+    infoBoxes:{
+      Overview: {
+        title: "",
+        comp: (props={}) =>{
+          let totalNum = 0
+          let totalEst = 0
+          let totalFEMA = 0
+          return (
+          <div>
+            <table className='table table-sm table-hover'>
+              <thead><tr><th>Cnty</th><th>Rpts</th><th>Est. Dmg $</th><th>FEMA Val. $</th></tr></thead>
+              <tbody>
+                {Object.values(summary).map(d => {
+                  totalNum += d.reports
+                  totalEst += d.local_estimate_total
+                  totalFEMA += d.fema_validated_total
+                  return (
+                  <tr>
+                    <td>{d.county}</td>
+                    <td>{d.reports}</td>
+                    <td>{fnum(d.local_estimate_total)}</td>
+                    <td>{fnum(d.fema_validated_total)}</td>
+                  </tr>
+                  )})
+                }
 
+            </tbody>
+            <tfoot><tr style={{fontWeight: 600}}><td>Total</td><td>{totalNum}</td><td>{fnum(totalEst)}</td><td>{fnum(totalFEMA)}</td></tr></tfoot>
+            </table>
+          </div>
+        )},
+        show: true
+      }
+    }
 })
 
 export default PaLayer

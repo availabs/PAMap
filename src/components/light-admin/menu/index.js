@@ -62,7 +62,7 @@ class Menu extends Component {
 
         let dynamicStyle = {
             marginBottom: currentPath.subMenus ? 50 : 0,
-            position: 'fixed',
+            // position: 'fixed',
             zIndex: 100,
             // width: '100%' //change
         };

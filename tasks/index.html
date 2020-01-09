@@ -54,25 +54,26 @@ d3.csv(sample, function(error, data) {
 
                   if(splitLatLong(ll)) {
                     d.ll = splitLatLong(ll)
-                  } else if (ll.split('to').length = 2) {
-                    let multi = ll.split('to')
-                    if(splitLatLong(multi[0]) && splitLatLong(multi[1])){
-                      console.log('this worked!')
-                      d.ll = [splitLatLong(multi[0]),splitLatLong(multi[1])]
-                    }
-                  }else if (ll.split('TO').length = 2) {
-                    let multi = ll.split('TO')
-                    if(splitLatLong(multi[0]) && splitLatLong(multi[1])){
-                      console.log('this worked!')
-                      d.ll = [splitLatLong(multi[0]),splitLatLong(multi[1])]
-                    }
-                  }else if (ll.split('&').length = 2) {
-                    let multi = ll.split('&')
-                    if(splitLatLong(multi[0]) && splitLatLong(multi[1])){
-                      console.log('this worked!')
-                      d.ll = [splitLatLong(multi[0]),splitLatLong(multi[1])]
-                    }
-                  }
+                  } 
+                  // else if (ll.split('to').length = 2) {
+                  //   let multi = ll.split('to')
+                  //   if(splitLatLong(multi[0]) && splitLatLong(multi[1])){
+                  //     console.log('this worked!')
+                  //     d.ll = [splitLatLong(multi[0]),splitLatLong(multi[1])]
+                  //   }
+                  // }else if (ll.split('TO').length = 2) {
+                  //   let multi = ll.split('TO')
+                  //   if(splitLatLong(multi[0]) && splitLatLong(multi[1])){
+                  //     console.log('this worked!')
+                  //     d.ll = [splitLatLong(multi[0]),splitLatLong(multi[1])]
+                  //   }
+                  // }else if (ll.split('&').length = 2) {
+                  //   let multi = ll.split('&')
+                  //   if(splitLatLong(multi[0]) && splitLatLong(multi[1])){
+                  //     console.log('this worked!')
+                  //     d.ll = [splitLatLong(multi[0]),splitLatLong(multi[1])]
+                  //   }
+                  // }
 
 
 
@@ -88,7 +89,7 @@ d3.csv(sample, function(error, data) {
               .filter(d => d.ll)
 
             console.log('how many?', data.length) 
-            console.log('how many with location', latLonData.length, latLonData) 
+            console.log('how many with location', latLonData.length) 
             //let latLonDataNew = latLonData.reve
 
             // turn latLonData into geojson

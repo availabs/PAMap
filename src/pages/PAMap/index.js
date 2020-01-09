@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import AvlMap from 'components/AvlMap';
 import PaEventsLayer from './layers/PaEventsLayer'
+import styled from 'styled-components'
+
+const MapWrapper = styled.div`
+  width: 100vw;
+  height: calc(100vh - 41px);
+ 
+`;
 
 let eventsLayer = PaEventsLayer()
 class PAMap extends Component {
   render () {
    return (
-     <div style={{width: '100vw', height: '100vh'}}>
+     <MapWrapper>
 
        <AvlMap
         layers={[eventsLayer]}
@@ -16,23 +23,27 @@ class PAMap extends Component {
           -75.60791015625,
           42.76314586689492
         ]}
+        boxZoom={true}
+        styles={[
+            { name: 'Dark Streets', style: 'mapbox://styles/am3081/ck55pjv7a06p61cp7xvyngyu8'},
+            { name: 'Light Streets', style: 'mapbox://styles/am3081/ck3t1g9a91vuy1crzp79ffuac'}
+          ]}
        /> 
 
-     </div>
+     </MapWrapper>
     )
   }
 
 }
 
 export default {
-    icon: 'os-icon os-icon-map',
-    path: '/',
-    exact: true,
-    name: 'PA Map',
-    auth: false,
-    //authLevel: 1,
-	mainNav: true,
-    menuSettings: {
+  path: '/',
+  name: 'Event Map',
+  icon: 'os-icon os-icon-map',
+  exact: true,
+  auth: false,
+  mainNav: false,
+  menuSettings: {
     image: 'none',
     display: 'none',
     scheme: 'color-scheme-dark', 
