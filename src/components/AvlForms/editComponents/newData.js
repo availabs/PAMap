@@ -5,17 +5,10 @@ import {connect} from "react-redux";
 import Element from 'components/light-admin/containers/Element'
 import get from "lodash.get";
 import GraphFactory from 'components/AvlForms/editComponents/graphFactory.js';
-
+import moment from 'moment'
 var _ = require("lodash");
 
-const counties = [
-    "36101","36003","36091","36075","36111","36097","36089","36031","36103","36041","36027","36077",
-    "36109","36001","36011","36039","36043","36113","36045","36019","36059","36053","36115","36119",
-    "36049", "36069", "36023","36085","36029","36079","36057","36105","36073","36065","36009",
-    "36123","36107","36055", "36095","36007", "36083","36099","36081","36037","36117","36063","36047",
-    "36015","36121","36061","36021","36013","36033","36017", "36067","36035","36087","36051","36025",
-    "36071","36093","36005"
-];
+let counties = [];
 
 
 class AvlFormsNewData extends React.Component{
@@ -33,10 +26,11 @@ class AvlFormsNewData extends React.Component{
 
     fetchFalcorDeps(){
         let form_type = this.props.config.map(d => d.type);
-
-        return this.props.falcor.get(['geo',counties,['name']])
-            .then(() =>{
-                this.props.falcor.get(['forms',form_type,'meta'])
+        return this.props.falcor.get(['geo',['36'],'counties'])
+            .then(response =>{
+                counties = response.json.geo['36'].counties
+                this.props.falcor.get(['geo',counties,['name']],
+                    ['forms',form_type,'meta'])
                     .then(response =>{
                         return response
                     })
@@ -58,7 +52,6 @@ class AvlFormsNewData extends React.Component{
     }
 
     componentDidMount(){
-
         if(this.props.id[0]){
             let attributes = this.props.config.map(d => Object.keys(d.attributes));
             return this.props.falcor.get(['forms','byId',this.props.id])
@@ -67,13 +60,25 @@ class AvlFormsNewData extends React.Component{
                     let tmp_state = {}
                     if(graph){
                         attributes[0].forEach(attribute =>{
-                            if(attribute.includes('date')){
-                                let d = graph.attributes[attribute] ? graph.attributes[attribute].toString().split('-') : ''
-                                let date = d[0] +'-'+ d[1] +'-'+ d[2] // 10/30/2010
-                                tmp_state[attribute] = date
+                            var date_regex = /^(0[1-9]|1[0-2])\/([1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/ ;
+                            if(date_regex.test(graph.attributes[attribute])){
+                                if(graph.attributes[attribute].includes('/')){
+                                    let d = graph.attributes[attribute] ? graph.attributes[attribute].toString().split("/") : ''
+                                    if(d[1].length < 2){
+                                        d[1] = '0' + d[1]
+                                    }
+                                    if(d[0].length < 2){
+                                        d[0] = '0'+d[0]
+                                    }
+                                    let date = d[2] + '-' + d[0] + '-' + d[1]
+                                    tmp_state[attribute] = date
+                                }else{
+                                    tmp_state[attribute] = graph.attributes[attribute]
+                                }
                             }else{
-                                tmp_state[attribute] = graph.attributes[attribute]
+                                tmp_state[attribute] = graph.attributes[attribute] || ''
                             }
+
 
                         });
                         this.setState(
