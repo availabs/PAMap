@@ -8,12 +8,14 @@ import { Link } from "react-router-dom"
 import {sendSystemMessage} from 'store/modules/messages';
 import pick from "lodash.pick"
 import {push} from "react-router-redux";
+import utils from 'utils/sheldusUtils.js'
 var _ = require('lodash')
-const counties = ["36101", "36003", "36091", "36075", "36111", "36097", "36089", "36031", "36103", "36041", "36027", "36077",
-    "36109", "36001", "36011", "36039", "36043", "36113", "36045", "36019", "36059", "36053", "36115", "36119", "36049", "36069",
-    "36023", "36085", "36029", "36079", "36057", "36105", "36073", "36065", "36009", "36123", "36107", "36055", "36095", "36007",
-    "36083", "36099", "36081", "36037", "36117", "36063", "36047", "36015", "36121", "36061", "36021", "36013", "36033", "36017",
-    "36067", "36035", "36087", "36051", "36025", "36071", "36093", "36005"];
+const counties = ["36","36101", "36003", "36091", "36075", "36111", "36097", "36089", "36031", "36103", "36041",
+    "36027", "36077", "36109", "36001", "36011", "36039", "36043", "36113", "36045", "36019", "36059", "36053",
+    "36115", "36119", "36049", "36069", "36023", "36085", "36029", "36079", "36057", "36105", "36073", "36065",
+    "36009", "36123", "36107", "36055", "36095", "36007", "36083", "36099", "36081", "36037", "36117", "36063",
+    "36047", "36015", "36121", "36061", "36021", "36013", "36033", "36017", "36067", "36035", "36087", "36051",
+    "36025", "36071", "36093", "36005"];
 
 class AvlFormsListTable extends React.Component{
     constructor(props){
@@ -90,22 +92,39 @@ class AvlFormsListTable extends React.Component{
     formsListTable(){
         let geo = this.props.geoData
         let graph = this.props.formsListData;
-        let formAttributes = this.props.config.map(d => d.list_attributes);
+        let formAttributes = [];
         let combine_list_attributes = this.props.config.map(d => d.combine_list_attributes);
+        let money_attributes = this.props.config.map(d => d.money_attributes);
         let listViewData = [];
+        var self = this;
+        let check = [];
+        if(this.props.config[0].list_attributes_order){
+            this.props.config[0].list_attributes_order.forEach(item =>{
+                check.push(item.attribute)
+            })
+            formAttributes.push(check)
+        }else{
+            formAttributes = this.props.config.map(d => d.list_attributes);
+        }
         if(graph){
             if(combine_list_attributes[0] === undefined){
                 Object.keys(graph).forEach(item =>{
                     let data = {};
                     formAttributes[0].forEach(attribute =>{
                         if(graph[item].value && graph[item].value.attributes){
-                            if(this.state.form_ids.includes(item)){
-                                data['id'] = item
-                                data[attribute] = graph[item].value.attributes[attribute] || ' '
+                            if(self.state.form_ids.includes(item)){
+                                if(money_attributes[0].includes(attribute)){
+                                    data['id'] = item
+                                    data[attribute] = geo[graph[item].value.attributes[attribute]] ? geo[graph[item].value.attributes[attribute]].name || '' : utils.fnum(graph[item].value.attributes[attribute])
+                                }
+                                else{
+                                    data['id'] = item
+                                    data[attribute] = geo[graph[item].value.attributes[attribute]] ? geo[graph[item].value.attributes[attribute]].name || '' : graph[item].value.attributes[attribute]
+                                }
                             }
 
                         }
-                    });
+                    })
                     listViewData.push(data)
 
                 });
