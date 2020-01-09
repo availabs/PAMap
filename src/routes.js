@@ -7,18 +7,24 @@ import Landing from './pages/Landing'
 import Public from './pages/Public/Home'
 import Login from './pages/Landing/Login'
 import Signup from './pages/Landing/SignUp'
+import EventsFormsIndex from './pages/auth/Events'
+import EventsFormsNew from './pages/auth/Events/new'
+import EventsFormsView from './pages/auth/Events/view'
+import EventsUpload from './pages/auth/Events/upload'
 
 const routes = [
-
         //Landing,
-        ...Public,
+        //...Public,
         Login,
         Signup,
         PAMap,
+        ...Public,
+        ...EventsFormsIndex,
+        ...EventsFormsNew,
+        ...EventsFormsView,
+        ...EventsUpload,
         Logout,
         NoMatch,
-
-
 ];
 export default {
     routes: routes
